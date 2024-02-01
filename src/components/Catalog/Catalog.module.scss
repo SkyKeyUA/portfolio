@@ -1,0 +1,41 @@
+/** @format */
+
+.inner {
+  position: relative;
+  background-color: var(--dark);
+  color: var(--primary);
+}
+
+.container {
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.menu {
+}
+
+.list {
+  font-weight: 700;
+  font-size: 16px;
+  display: flex;
+  gap: 10px;
+  justify-content: space-between;
+}
+.item {
+  cursor: pointer;
+  margin: 20px 0px;
+  white-space: nowrap;
+  transition: color 0.3s ease 0s;
+  &:hover {
+    color: var(--orange);
+  }
+  &:active {
+    -webkit-transform: translateY(1px);
+    transform: translateY(1px);
+  }
+  &_open {
+    color: var(--orange);
+  }
+}
