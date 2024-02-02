@@ -3,15 +3,15 @@
 import { CSSProperties } from 'react';
 
 export enum IconsEnum {
-  logo = '/icons/stroke/logo.svg',
-  exit = '/icons/stroke/exit.svg',
-  loader = '/icons/stroke/loader.svg',
-  cart = '/icons/stroke/cart.svg',
-  search = '/icons/stroke/search.svg',
-  info = '/icons/stroke/info.svg',
-  moon = '/icons/stroke/moon.svg',
-  sun = '/icons/stroke/sun.svg',
-  cross = '/icons/stroke/cross.svg',
+  logo = '/images/icons/stroke/logo.svg',
+  exit = '/images/icons/stroke/exit.svg',
+  loader = '/images/icons/stroke/loader.svg',
+  cart = '/images/icons/stroke/cart.svg',
+  search = '/images/icons/stroke/search.svg',
+  info = '/images/icons/stroke/info.svg',
+  moon = '/images/icons/stroke/moon.svg',
+  sun = '/images/icons/stroke/sun.svg',
+  cross = '/images/icons/stroke/cross.svg',
 }
 
 export type SvgIconProps = {

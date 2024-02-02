@@ -5,6 +5,8 @@
 // @tailwind utilities;
 
 #__next {
+  background: url('/images/picture.jpg') 0 0/100% 100% no-repeat;
+  width: 100vw;
   min-height: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -41,8 +43,7 @@ body {
 }
 
 body {
-  color: var(--dark-grey);
-  background-color: var(--body-color);
+  color: var(--primary-black);
   font-family: Arial, Helvetica, sans-serif;
 }
 
