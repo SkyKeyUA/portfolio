@@ -3,14 +3,15 @@
 import React from 'react';
 
 import styles from './HomePage.module.scss';
-import { Product } from '@components/Product';
+import { AboutMe, Skills } from '@components/HomePage';
+import { Experience } from '@components/HomePage/Experience';
 
 export const HomePage: React.FC = () => {
   return (
     <div className={styles.container}>
-      {[...Array(10)].map((_, index) => (
-        <Product key={index} />
-      ))}
+      <AboutMe />
+      <Skills />
+      <Experience />
     </div>
   );
 };

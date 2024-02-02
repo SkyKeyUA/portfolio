@@ -1,6 +1,23 @@
 /** @format */
 
+.title {
+  line-height: 1.5;
+  font-size: 32px;
+  font-weight: 700;
+  text-align: center;
+  text-transform: uppercase;
+}
+
 [class*='container'] {
   margin: 0 auto;
   max-width: 1599.98px;
+}
+.small__container {
+  max-width: 1000px;
+  margin: 0 auto;
+  background: var(--light-primary);
+  padding: 20px;
+  border-radius: 16px;
+  box-shadow: var(--shadow-card);
+  border: 6px solid var(--orange);
 }
