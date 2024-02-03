@@ -26,6 +26,7 @@
     "react-responsive": "^9.0.2",
     "react-svg": "^16.1.29",
     "sass": "^1.64.2",
+    "swiper": "^11.0.5",
     "typescript": "5.1.6"
   }
 }

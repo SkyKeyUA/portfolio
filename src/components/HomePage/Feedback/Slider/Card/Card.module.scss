@@ -1,39 +1,35 @@
-/** @format */
-
 .root {
+  box-shadow: var(--shadow-card);
+  background: var(--light-primary);
+  border: 6px solid var(--orange);
+  border-radius: 20px;
+  margin-bottom: 40px;
 }
-.container {
-  padding: 20px 10px;
-}
-
-// .header__inner
-
-.inner {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  height: 70px;
-}
-
-// .header__logo
-
-.logo {
-  z-index: 5;
+.body {
   position: relative;
-  font-weight: 700;
-  line-height: normal;
-  padding: 6px;
-  border-radius: 6px;
+}
+.image {
+  width: 100%;
+  height: auto;
+  border-radius: 16px;
+}
+.link {
+  position: absolute;
+  bottom: 14%;
+  padding: 3px;
+  background: var(--light-primary);
+  box-shadow: var(--shadow-card);
+  border-radius: 16px;
   overflow: hidden;
   transition: all 0.3s ease 0s;
-  box-shadow: var(--shadow-card);
   span {
+    cursor: pointer;
     color: var(--primary-black);
     position: relative;
-    padding: 10px 23px;
+    padding: 5px;
     display: block;
     height: 100%;
-    border-radius: 6px;
+    border-radius: 16px;
     background: var(--light-primary);
     font-size: 24px;
   }
@@ -47,10 +43,10 @@
   }
   &::before {
     content: '';
-    top: -323%;
+    top: -125%;
     left: -6%;
     width: 112%;
-    height: 748%;
+    height: 347%;
     position: absolute;
     background: conic-gradient(
       var(--primary-black) 0%,
@@ -64,15 +60,39 @@
     animation: keyframe-btn 3s linear infinite;
     animation-play-state: running;
   }
-  @media (max-width: 767.98px) {
-    span {
-      font-size: 18px;
-    }
-  }
   @media (max-width: 479.98px) {
     span {
-      font-size: 14px;
+      font-size: 16px;
     }
+  }
+}
+.layout {
+  left: 3.5%;
+}
+.code {
+  right: 3.5%;
+}
+.title {
+  text-align: center;
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  margin: 10px auto;
+}
+.text {
+  font-size: 20px;
+  line-height: 1.5;
+  margin: 0px 40px 10px;
+  span {
+    white-space: nowrap;
+    font-weight: 700;
+  }
+
+  @media (max-width: 767.98px) {
+    font-size: 18px;
+  }
+  @media (max-width: 479.98px) {
+    font-size: 16px;
   }
 }
 @keyframes keyframe-btn {

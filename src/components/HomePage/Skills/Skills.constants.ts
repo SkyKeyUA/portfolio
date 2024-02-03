@@ -1,7 +1,4 @@
-type SkillsItem = {
-  category: string;
-  skills: string;
-};
+import { SkillsItem } from './Skills.types';
 
 export const SkillsItems: SkillsItem[] = [
   {

@@ -1,0 +1,54 @@
+/** @format */
+
+.container {
+  margin-bottom: 40px;
+}
+.title {
+  margin-bottom: 20px;
+}
+.body {
+  margin: 0 auto;
+}
+
+.body {
+}
+
+.swiper {
+}
+.arrows {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.arrow {
+  padding: 12px 16px;
+  background: var(--primary-black);
+  border-radius: 32px;
+  cursor: pointer;
+  transition: all 0.3s ease 0s;
+  path {
+    transition: all 0.3s ease 0s;
+    fill: var(--light-primary);
+  }
+  &:hover {
+    opacity: 0.6;
+  }
+  &:active {
+    opacity: 1;
+  }
+}
+.prev {
+  transform: rotate(-180deg);
+}
+.next {
+}
+.pagination {
+  white-space: nowrap;
+  font-size: 20px;
+  padding: 10px;
+  margin: 0px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+}
