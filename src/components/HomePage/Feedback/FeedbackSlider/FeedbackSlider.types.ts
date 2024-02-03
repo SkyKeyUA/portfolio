@@ -1,4 +1,4 @@
-import { CardProps } from '../Card/Card.types';
+import { CardProps } from './Card/Card.types';
 
 export type SliderProps = {
   items: CardProps[];
