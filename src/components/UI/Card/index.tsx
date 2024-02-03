@@ -24,7 +24,17 @@ export const Card: React.FC<CardProps> = ({ image, layoutLink, codeLink, project
           <span>NDA</span>
         </div>
       )}
-      {projectTitle && <div className={`${styles.title} title`}>{projectTitle}</div>}
+      {projectTitle && (
+        <div className={`${styles.title} title`}>
+          {layoutLink ? (
+            <Link className={styles.layoutLink} href={layoutLink} target="_blank">
+              {projectTitle}
+            </Link>
+          ) : (
+            projectTitle
+          )}
+        </div>
+      )}
       {text && (
         <div className={styles.text}>
           <span>Tech stack: </span>

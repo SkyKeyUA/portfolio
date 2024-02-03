@@ -3,7 +3,13 @@
 import React from 'react';
 
 import styles from './HomePage.module.scss';
-import { AboutMe, CurrentProjects, Experience, Skills } from '@components/HomePage';
+import {
+  AboutMe,
+  CurrentProjects,
+  Experience,
+  RecentlyCompletedProjects,
+  Skills,
+} from '@components/HomePage';
 
 export const HomePage: React.FC = () => {
   return (
@@ -12,6 +18,7 @@ export const HomePage: React.FC = () => {
       <Skills />
       <Experience />
       <CurrentProjects />
+      <RecentlyCompletedProjects />
     </div>
   );
 };
