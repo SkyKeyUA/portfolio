@@ -9,14 +9,21 @@ import { Card } from '../Card';
 import { SliderProps } from './Slider.types';
 import { IconsEnum, SvgIcon } from '../SvgIcon';
 
-export const Slider: React.FC<SliderProps> = ({ items, title }) => {
+export const Slider: React.FC<SliderProps> = ({ items, title, subtitle }) => {
   const navigationPrevRef = React.useRef(null);
   const navigationNextRef = React.useRef(null);
   const paginationRef = React.useRef(null);
   return (
     <>
       <div className={`${styles.container} small__container`}>
-        <div className={`${styles.title} title`}>{title}</div>
+        {title && (
+          <div
+            style={subtitle ? { marginBottom: '0px' } : { marginBottom: '20px' }}
+            className={`${styles.title} title`}>
+            {title}
+          </div>
+        )}
+        {subtitle && <div className={`${styles.subtitle} title`}>{subtitle}</div>}
         <div className={styles.arrows}>
           <div ref={navigationPrevRef} className={`${styles.prev} ${styles.arrow}`}>
             <SvgIcon size={28} src={IconsEnum.arrow} />

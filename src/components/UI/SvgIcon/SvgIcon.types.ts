@@ -13,6 +13,12 @@ export enum IconsEnum {
   sun = '/images/icons/stroke/sun.svg',
   cross = '/images/icons/stroke/cross.svg',
   arrow = '/images/icons/stroke/arrow.svg',
+  phone = '/images/icons/footer/footer-phone.svg',
+  email = '/images/icons/footer/footer-email.svg',
+  facebook = '/images/icons/social/facebook.svg',
+  linkedin = '/images/icons/social/linkedin.svg',
+  telegram = '/images/icons/social/telegram.svg',
+  github = '/images/icons/social/github.svg',
 }
 
 export type SvgIconProps = {

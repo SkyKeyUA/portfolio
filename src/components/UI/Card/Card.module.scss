@@ -99,6 +99,12 @@
     font-size: 16px;
   }
 }
+.server {
+  &::before {
+    top: -152%;
+    height: 422%;
+  }
+}
 @keyframes keyframe-btn {
   to {
     transform: rotate(360deg);

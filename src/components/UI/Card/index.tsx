@@ -10,10 +10,14 @@ export const Card: React.FC<CardProps> = ({ image, layoutLink, codeLink, project
   return (
     <div className={styles.root}>
       {image && <img className={styles.image} src={image} alt="" />}
-      {layoutLink && (
+      {layoutLink ? (
         <Link className={`${styles.layout} ${styles.link}`} href={layoutLink} target="_blank">
           <span>Layout</span>
         </Link>
+      ) : (
+        <div className={`${styles.layout} ${styles.link} ${styles.server}`}>
+          <span>Need Server</span>
+        </div>
       )}
       {codeLink ? (
         <Link className={`${styles.code} ${styles.link}`} href={codeLink} target="_blank">
