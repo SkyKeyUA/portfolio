@@ -3,11 +3,13 @@ import React from 'react';
 import styles from './Social.module.scss';
 import { IconsEnum, SvgIcon } from '../SvgIcon';
 import Link from 'next/link';
+import { SwitchThemeButton } from '../Button';
 
 export const SocialComponent = () => {
   return (
-    <div className={styles.root}>
+    <header className={styles.root}>
       <div className={styles.inner}>
+        <SwitchThemeButton />
         <div className={`${styles.phone} ${styles.link}`}>
           <Link href={'tel:5877168483'}>
             <SvgIcon src={IconsEnum.phone} />
@@ -39,6 +41,6 @@ export const SocialComponent = () => {
           </Link>
         </div>
       </div>
-    </div>
+    </header>
   );
 };
