@@ -24,7 +24,6 @@ export const HomePage: React.FC = () => {
       <RecentlyCompletedProjects />
       <CompletedProjects />
       <CompletedProjectsJS />
-      <Social />
     </div>
   );
 };
