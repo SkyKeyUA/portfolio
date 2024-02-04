@@ -1,5 +1,6 @@
 export type ProjectProps = {
   title?: string;
+  subtitle?: string;
   items?: ItemProps[];
 };
 

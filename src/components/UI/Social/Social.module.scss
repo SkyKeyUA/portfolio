@@ -1,27 +1,29 @@
-/** @format */
-
 .root {
-}
-.container {
-  padding: 10px 10px 80px;
+  position: fixed;
+
+  right: 20px;
+  z-index: 50;
+  @media (min-width: 1199.98px) {
+    transform: translate(0px, -50%);
+    top: 50%;
+  }
+  @media (max-width: 1199.98px) {
+    bottom: 0;
+    right: 50%;
+    transform: translate(50%, 0px);
+  }
 }
 .inner {
+  padding: 5px;
+  background: var(--light-primary);
+  border-radius: 16px;
+  border: 6px solid var(--orange);
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-wrap: wrap;
-  gap: 40px;
-}
-.phone {
-  &::before {
-    top: -170%;
-    height: 420%;
-  }
-}
-.email {
-  &::before {
-    top: -323%;
-    height: 748%;
+  gap: 10px;
+  @media (min-width: 1199.98px) {
+    flex-direction: column;
   }
 }
 .link {
@@ -29,7 +31,7 @@
   position: relative;
   font-weight: 700;
   line-height: normal;
-  padding: 6px;
+  padding: 3px;
   border-radius: 6px;
   overflow: hidden;
   transition: all 0.3s ease 0s;
@@ -41,7 +43,7 @@
     align-items: center;
     white-space: nowrap;
     position: relative;
-    padding: 10px 23px;
+    padding: 5px;
     height: 100%;
     border-radius: 6px;
     background: var(--light-primary);
@@ -62,6 +64,8 @@
   }
   &::before {
     content: '';
+    top: -323%;
+    height: 748%;
     left: -6%;
     width: 112%;
     position: absolute;
