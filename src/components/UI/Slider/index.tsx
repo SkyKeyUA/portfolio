@@ -14,6 +14,7 @@ export const Slider: React.FC<SliderProps> = ({ items, title, subtitle }) => {
   const navigationPrevRef = React.useRef<HTMLDivElement>(null);
   const navigationNextRef = React.useRef<HTMLDivElement>(null);
   const paginationRef = React.useRef<HTMLDivElement>(null);
+  const showNavigation = items && items.length > 1;
   const onBeforeInit = (swiper: SwiperCore): void => {
     if (swiper.params.navigation && typeof swiper.params.navigation !== 'boolean') {
       const navigation = swiper.params.navigation;
@@ -29,21 +30,23 @@ export const Slider: React.FC<SliderProps> = ({ items, title, subtitle }) => {
       <div className={`${styles.container} small__container`}>
         {title && (
           <div
-            style={subtitle ? { marginBottom: '0px' } : { marginBottom: '20px' }}
+            style={!subtitle && showNavigation ? { marginBottom: '20px' } : { marginBottom: '0px' }}
             className={`${styles.title} title`}>
             {title}
           </div>
         )}
         {subtitle && <div className={`${styles.subtitle} title`}>{subtitle}</div>}
-        <div className={styles.arrows}>
-          <div ref={navigationPrevRef} className={`${styles.prev} ${styles.arrow}`}>
-            <SvgIcon size={28} src={IconsEnum.arrow} />
+        {showNavigation && (
+          <div className={styles.arrows}>
+            <div ref={navigationPrevRef} className={`${styles.prev} ${styles.arrow}`}>
+              <SvgIcon size={28} src={IconsEnum.arrow} />
+            </div>
+            <div ref={paginationRef} className={styles.pagination}></div>
+            <div ref={navigationNextRef} className={`${styles.next} ${styles.arrow}`}>
+              <SvgIcon size={28} src={IconsEnum.arrow} />
+            </div>
           </div>
-          <div ref={paginationRef} className={styles.pagination}></div>
-          <div ref={navigationNextRef} className={`${styles.next} ${styles.arrow}`}>
-            <SvgIcon size={28} src={IconsEnum.arrow} />
-          </div>
-        </div>
+        )}
       </div>
       <div className={styles.body}>
         {items ? (
