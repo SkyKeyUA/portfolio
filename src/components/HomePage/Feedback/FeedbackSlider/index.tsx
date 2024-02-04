@@ -4,6 +4,7 @@ import styles from './FeedbackSlider.module.scss';
 import 'swiper/scss';
 import 'swiper/scss/pagination';
 
+import SwiperCore from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Pagination, Navigation, Autoplay } from 'swiper/modules';
 import { SliderProps } from './FeedbackSlider.types';
@@ -11,8 +12,15 @@ import { Card } from './Card';
 import { IconsEnum, SvgIcon } from '@components/UI/SvgIcon';
 
 export const FeedbackSlider: React.FC<SliderProps> = ({ items }) => {
-  const navigationPrevRef = React.useRef(null);
-  const navigationNextRef = React.useRef(null);
+  const navigationPrevRef = React.useRef<HTMLDivElement>(null);
+  const navigationNextRef = React.useRef<HTMLDivElement>(null);
+  const onBeforeInit = (swiper: SwiperCore): void => {
+    if (swiper.params.navigation && typeof swiper.params.navigation !== 'boolean') {
+      const navigation = swiper.params.navigation;
+      navigation.prevEl = navigationPrevRef.current;
+      navigation.nextEl = navigationNextRef.current;
+    }
+  };
   return (
     <>
       <div className={`${styles.container} small__container`}>
@@ -39,10 +47,7 @@ export const FeedbackSlider: React.FC<SliderProps> = ({ items }) => {
             prevEl: navigationPrevRef.current,
             disabledClass: 'swiper-button-disabled',
           }}
-          onBeforeInit={(swiper) => {
-            swiper.params.navigation.prevEl = navigationPrevRef.current;
-            swiper.params.navigation.nextEl = navigationNextRef.current;
-          }}
+          onBeforeInit={onBeforeInit}
           autoplay={{
             delay: 5000,
             disableOnInteraction: false,
