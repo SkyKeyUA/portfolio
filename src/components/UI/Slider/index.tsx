@@ -3,6 +3,7 @@ import React from 'react';
 import styles from './Slider.module.scss';
 import 'swiper/scss';
 
+import SwiperCore from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination } from 'swiper/modules';
 import { Card } from '../Card';
@@ -10,9 +11,19 @@ import { SliderProps } from './Slider.types';
 import { IconsEnum, SvgIcon } from '../SvgIcon';
 
 export const Slider: React.FC<SliderProps> = ({ items, title, subtitle }) => {
-  const navigationPrevRef = React.useRef(null);
-  const navigationNextRef = React.useRef(null);
-  const paginationRef = React.useRef(null);
+  const navigationPrevRef = React.useRef<HTMLDivElement>(null);
+  const navigationNextRef = React.useRef<HTMLDivElement>(null);
+  const paginationRef = React.useRef<HTMLDivElement>(null);
+  const onBeforeInit = (swiper: SwiperCore): void => {
+    if (swiper.params.navigation && typeof swiper.params.navigation !== 'boolean') {
+      const navigation = swiper.params.navigation;
+      navigation.prevEl = navigationPrevRef.current;
+      navigation.nextEl = navigationNextRef.current;
+    }
+    if (swiper.params.pagination && typeof swiper.params.pagination !== 'boolean') {
+      swiper.params.pagination.el = paginationRef.current;
+    }
+  };
   return (
     <>
       <div className={`${styles.container} small__container`}>
@@ -47,11 +58,7 @@ export const Slider: React.FC<SliderProps> = ({ items, title, subtitle }) => {
               prevEl: navigationPrevRef.current,
               disabledClass: 'swiper-button-disabled',
             }}
-            onBeforeInit={(swiper) => {
-              swiper.params.navigation.prevEl = navigationPrevRef.current;
-              swiper.params.navigation.nextEl = navigationNextRef.current;
-              swiper.params.pagination.el = paginationRef.current;
-            }}
+            onBeforeInit={onBeforeInit}
             initialSlide={0}
             modules={[Navigation, Pagination]}>
             {items.map((obj, i) => (
