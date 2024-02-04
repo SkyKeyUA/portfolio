@@ -2,6 +2,7 @@ import React from 'react';
 
 import styles from './AboutMe.module.scss';
 import Link from 'next/link';
+import Image from 'next/image';
 
 export const AboutMe: React.FC = () => {
   return (
@@ -9,7 +10,7 @@ export const AboutMe: React.FC = () => {
       <div className={`${styles.container} small__container`}>
         <div className={styles.image}>
           <Link href="https://www.linkedin.com/in/oleksandr-veremiienko/" target="_blank">
-            <img src="/images/aboutMe/1.png" alt="" />
+            <Image width={480} height={480} src="/images/aboutMe/1.png" alt="" />
           </Link>
         </div>
         <div className={styles.info}>

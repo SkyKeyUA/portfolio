@@ -5,11 +5,12 @@ import React from 'react';
 import styles from './Card.module.scss';
 import { CardProps } from './Card.types';
 import Link from 'next/link';
+import Image from 'next/image';
 
 export const Card: React.FC<CardProps> = ({ image, layoutLink, codeLink, projectTitle, text }) => {
   return (
     <div className={styles.root}>
-      {image && <img className={styles.image} src={image} alt="" />}
+      {image && <Image width={1570} height={780} className={styles.image} src={image} alt="" />}
       {layoutLink ? (
         <Link className={`${styles.layout} ${styles.link}`} href={layoutLink} target="_blank">
           <span>Layout</span>
