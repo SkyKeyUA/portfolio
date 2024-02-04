@@ -27,11 +27,13 @@
     transition: all 0.3s ease 0s;
     fill: var(--light-primary);
   }
-  &:hover {
-    opacity: 0.6;
-  }
-  &:active {
-    opacity: 1;
+  @media (min-width: 991.98px) {
+    &:hover {
+      opacity: 0.6;
+    }
+    &:active {
+      opacity: 1;
+    }
   }
 }
 .prev {
