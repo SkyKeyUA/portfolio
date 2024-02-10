@@ -13,6 +13,7 @@ import {
   Skills,
 } from '@components/HomePage';
 import { Social } from '@components/UI/Social';
+import { Education } from '@components/HomePage/Education';
 
 export const HomePage: React.FC = () => {
   return (
@@ -24,6 +25,7 @@ export const HomePage: React.FC = () => {
       <RecentlyCompletedProjects />
       <CompletedProjects />
       <CompletedProjectsJS />
+      <Education />
     </div>
   );
 };
