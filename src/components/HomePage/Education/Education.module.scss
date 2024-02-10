@@ -1,0 +1,45 @@
+.root {
+  margin-bottom: 40px;
+}
+
+.container {
+  margin-bottom: 40px;
+}
+.title {
+  margin-bottom: 20px;
+}
+.subtitle {
+  position: relative;
+  line-height: 1.5;
+  font-size: 20px;
+  padding-left: 15px;
+  &:not(:last-child) {
+    margin-bottom: 10px;
+  }
+  @media (max-width: 767.98px) {
+    font-size: 18px;
+  }
+  @media (max-width: 479.98px) {
+    font-size: 16px;
+  }
+  &::before {
+    content: '';
+    position: absolute;
+    top: 8px;
+    left: 0;
+    border-radius: 50%;
+    width: 10px;
+    height: 10px;
+    background: var(--primary-black);
+    @media (max-width: 767.98px) {
+      top: 7px;
+      width: 9px;
+      height: 9px;
+    }
+    @media (max-width: 479.98px) {
+      top: 6px;
+      width: 8px;
+      height: 8px;
+    }
+  }
+}
