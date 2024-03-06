@@ -34,7 +34,7 @@
   overflow: hidden;
   transition: all 0.3s ease 0s;
   box-shadow: var(--shadow-card);
-  a {
+  span {
     gap: 10px;
     display: flex;
     justify-content: center;
@@ -51,14 +51,6 @@
         fill: var(--primary-black);
       }
     }
-  }
-  &:hover {
-    -webkit-transform: translateY(-2px);
-    transform: translateY(-2px);
-  }
-  &:active {
-    -webkit-transform: translateY(2px);
-    transform: translateY(2px);
   }
   &::before {
     content: '';
@@ -78,12 +70,12 @@
     animation-play-state: running;
   }
   @media (max-width: 767.98px) {
-    a {
+    span {
       font-size: 18px;
     }
   }
   @media (max-width: 479.98px) {
-    a {
+    span {
       font-size: 14px;
     }
   }

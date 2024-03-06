@@ -11,12 +11,12 @@ export const SocialComponent = () => {
       <div className={styles.inner}>
         <SwitchThemeButton />
         <div className={`${styles.phone} ${styles.link}`}>
-          <Link href={'tel:5877168483'}>
+          <Link href="#phone">
             <SvgIcon src={IconsEnum.phone} />
           </Link>
         </div>
         <div className={`${styles.email} ${styles.link}`}>
-          <Link href={'mailto:veremiienkoov96@gmail.com'}>
+          <Link href="#email">
             <SvgIcon src={IconsEnum.email} />
           </Link>
         </div>

@@ -4,9 +4,7 @@ import React from 'react';
 
 import styles from './Header.module.scss';
 import Link from 'next/link';
-import { IconsEnum, SvgIcon } from '@components/UI/SvgIcon';
 import { SwitchThemeButton } from '@components/UI/Button';
-import { Hamburger } from '@components/UI/Hamburger';
 
 export const Header: React.FC = () => {
   return (
