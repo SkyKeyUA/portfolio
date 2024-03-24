@@ -4,13 +4,6 @@ export const CurrentProjectsItems: ProjectProps = {
   title: 'Current Projects',
   items: [
     {
-      image: '/images/currentProjects/2.jpg',
-      layoutLink: 'https://skykeyua.github.io/xtreme/',
-      codeLink: 'https://github.com/SkyKeyUA/xtreme',
-      projectTitle: 'XTREME FIT',
-      text: 'WordPress, JavaScript, HTML 5, CSS 3, SCSS (SASS), Bash, Git, Photoshop, Figma, MySQL, SQL.',
-    },
-    {
       image: '/images/currentProjects/1.jpg',
       codeLink: 'https://github.com/SkyKeyUA/next-granit',
       projectTitle: 'Granit & Marble',
