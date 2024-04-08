@@ -4,6 +4,12 @@ export const CompletedProjectsJSItems: ProjectProps = {
   subtitle: 'JavaScript + WordPress',
   items: [
     {
+      image: '/images/recentlyCompletedProjects/1.jpg',
+      layoutLink: 'https://elkmoving.ca/',
+      projectTitle: 'ELK Moving',
+      text: 'WordPress, JavaScript, HTML 5, CSS 3, SCSS (SASS), Bash, Git, Photoshop, Figma, MySQL, SQL.',
+    },
+    {
       image: '/images/completedProjects/javascriptWordpress/1.jpg',
       layoutLink: 'https://skykeyua.github.io/gymmaster/',
       codeLink: 'https://github.com/SkyKeyUA/gymmaster',
