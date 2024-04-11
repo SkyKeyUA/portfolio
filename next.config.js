@@ -4,8 +4,14 @@
  */
 
 const nextConfig = {
+  output: 'export',
+  images: {
+    loader: 'custom',
+    loaderFile: './my-loader.ts',
+  },
   env: {
-    REACT_APP_API_URL: process.env.REACT_APP_API_URL,
+    NEXT_APP_API_URL: process.env.NEXT_APP_API_URL,
+    NEST_APP_API_URL: process.env.NEST_APP_API_URL,
   },
 };
 
