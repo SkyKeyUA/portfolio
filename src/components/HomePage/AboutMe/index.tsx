@@ -17,7 +17,7 @@ export const AboutMe: React.FC = () => {
           <h1>My name is Oleksandr Veremiienko.</h1>
           <p> I am a Full-Stack Developer with strong knowledge of React and TypeScript.</p>
           <p>
-            I offer 3 years of hands-on experience designing, developing, shipping, and maintaining
+            I offer 4 years of hands-on experience designing, developing, shipping, and maintaining
             large-scale products where availability, performance and security are paramount. I have
             established myself as a versatile software engineer who enthusiastically takes on new
             problems across the full-stack.
