@@ -3,7 +3,7 @@ import { SkillsItem } from './Skills.types';
 export const SkillsItems: SkillsItem[] = [
   {
     category: 'Specializations',
-    skills: 'TypeScript, Next.js, Nest.js, React.js, Node.js, JavaScript, HTML 5, CSS 3.',
+    skills: 'TypeScript, Next.js, Nest.js, React.js, Node.js, JavaScript, PHP, HTML 5, CSS 3.',
   },
   {
     category: 'Databases',
