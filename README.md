@@ -30,7 +30,7 @@ Conducted code reviews and provided constructive feedback to improve code qualit
 
 Tech stack: TypeScript, Next.js, Nest.js, React.js, Node.js, JavaScript, PHP, HTML 5, CSS 3, SCSS, Express, Redux Toolkit, Tailwind, Bash, Git, Photoshop, Figma, MySQL, SQL, PostgreSQL, WordPress, VS Code.
 
-Front-end Developer, Aweb-Systems
+Front-end Developer, Aweb-Systems, https://portfolio-oleksandrveremiienko.vercel.app/
 
 2021 to 2022
 
