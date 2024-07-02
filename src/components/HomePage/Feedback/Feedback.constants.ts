@@ -41,4 +41,8 @@ export const FeedbackItems: FeedbackItem[] = [
     image: '/images/feedback/10.jpg',
     layoutLink: 'https://www.upwork.com/freelancers/~014e5c1767bebba2b1',
   },
+  {
+    image: '/images/feedback/11.jpg',
+    layoutLink: 'https://www.upwork.com/freelancers/~014e5c1767bebba2b1',
+  },
 ];
