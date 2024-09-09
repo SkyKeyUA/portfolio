@@ -15,7 +15,7 @@ export const AboutMe: React.FC = () => {
         </div>
         <div className={styles.info}>
           <h1>My name is Oleksandr Veremiienko.</h1>
-          <p> I am a Full-Stack Developer with strong knowledge of React and TypeScript.</p>
+          <p> I am a Web Developer with strong knowledge of React and TypeScript.</p>
           <p>
             I offer 4 years of hands-on experience designing, developing, shipping, and maintaining
             large-scale products where availability, performance and security are paramount. I have
