@@ -5,7 +5,18 @@
 // @tailwind utilities;
 
 #__next {
-  background: url('/images/picture.jpg') 0 0/100% 100% no-repeat;
+  background: linear-gradient(
+    135deg,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(0, 5, 78, 1) 9%,
+    rgba(107, 12, 168, 1) 20%,
+    rgba(0, 108, 65, 1) 33%,
+    rgba(122, 0, 93, 1) 48%,
+    rgba(0, 79, 109, 1) 61%,
+    rgba(96, 0, 156, 1) 70%,
+    rgba(71, 67, 121, 1) 82%,
+    rgba(255, 255, 255, 1) 100%
+  );
   width: 100vw;
   min-height: 100%;
   display: -webkit-box;
